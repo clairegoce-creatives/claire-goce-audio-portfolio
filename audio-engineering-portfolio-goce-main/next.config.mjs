@@ -1,14 +1,12 @@
-/** @type {import('next').NextConfig} */
+const repoName = "clairegoceportfolio";
+
 const nextConfig = {
-  reactStrictMode: true,
-  poweredByHeader: false,
-  compress: true,
-  typescript: {
-    ignoreBuildErrors: false,
+  output: "export",
+  images: {
+    unoptimized: true,
   },
-  eslint: {
-    ignoreDuringBuilds: false,
-  },
+  basePath: `/${repoName}`,
+  assetPrefix: `/${repoName}/`,
 };
 
 export default nextConfig;
