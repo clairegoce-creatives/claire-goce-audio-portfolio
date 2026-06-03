@@ -22,22 +22,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Clear npm cache
-        working-directory: ./claire-goce-audio-portfolio
-        run: npm cache clean --force
-
       - name: Install dependencies
         working-directory: ./claire-goce-audio-portfolio
-        run: npm ci --no-audit --no-fund --legacy-peer-deps
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build static site
         working-directory: ./claire-goce-audio-portfolio
-        run: npx next build
+        run: pnpm exec next build
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
