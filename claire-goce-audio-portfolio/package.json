@@ -1,0 +1,27 @@
+{
+  "name": "claire-goce-audio-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.563.0",
+    "next": "16.2.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tailwind-merge": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24",
+    "@types/react": "19.2.10",
+    "@types/react-dom": "19.2.3",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.2.4",
+    "typescript": "^5"
+  }
+}
